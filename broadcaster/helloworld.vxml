@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<vxml xmlns="http://www.w3.org/2001/vxml" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.w3.org/2001/vxml 
+   http://www.w3.org/TR/voicexml20/vxml.xsd"
+   version="2.0">
+
+<menu id="menu1" dtmf="true">
+ <prompt><audio src="message1-.wav"/>
+<audio src="menu1.wav"/>
+<audio src="menu2.wav"/>
+<audio src="menu3.wav"/>
+<audio src="menu4.wav"/>
+</prompt>
+ <choice dtmf="1" next="#menu2"></choice>
+ <choice dtmf="2" next="#F3"></choice>
+ <choice dtmf="3" next="#F4"></choice>
+ <choice dtmf="4" next="#menu1"></choice>
+</menu>
+
+
+
+<menu id="menu2" dtmf="true">
+<prompt><audio src="emergency-.wav"/></prompt>
+<break strength="weak"/>
+<prompt><audio src="emergency1-.wav"/></prompt>
+<break strength="strong"/>
+<prompt><audio src="beep1.wav"/></prompt>
+<break time="5s"/>
+<prompt><audio src="yourmes.wav"/></prompt>
+<prompt><audio src="sent.wav"/></prompt>
+<choice dtmf="1" next="#menu0"></choice>
+<choice dtmf="2" next="#menu2"></choice>
+</menu>
+
+
+<menu id="menu3" dtmf="true">
+<prompt><audio src="emergency-.wav"/></prompt>
+<break strength="weak"/>
+<prompt><audio src="emergency1-.wav"/></prompt>
+<break strength="strong"/>
+<prompt><audio src="beep1.wav"/></prompt>
+<break time="5s"/>
+<prompt><audio src="yourmes.wav"/></prompt>
+<prompt><audio src="sent1.wav"/></prompt>
+<choice dtmf="1" next="#menu0"></choice>
+<choice dtmf="2" next="#menu3"></choice>
+</menu>
+
+
+<menu id="menu4" dtmf="true">
+<prompt><audio src="emergency-.wav"/></prompt>
+<break strength="weak"/>
+<prompt><audio src="emergency1-.wav"/></prompt>
+<break strength="strong"/>
+<prompt><audio src="beep1.wav"/></prompt>
+<break time="5s"/>
+<prompt><audio src="yourmes.wav"/></prompt>
+<prompt><audio src="sent2.wav"/></prompt>
+<choice dtmf="1" next="#menu0"></choice>
+<choice dtmf="2" next="#menu4"></choice>
+</menu>
+
+ </vxml>
+

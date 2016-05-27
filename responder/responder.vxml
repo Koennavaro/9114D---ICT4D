@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xmlns:voxeo="http://community.voxeo.com/xmlns/vxml">
+
+<menu id="menu1" dtmf="true">
+
+<prompt><audio src="responder1-.wav"/></prompt>
+
+<audio src="Fire_alert.wav" fetchhint="prefetch" />
+
+
+<prompt><audio src="responder2-.wav"/></prompt>
+
+<choice dtmf="1" next="#menu2"/>
+<choice dtmf="2" next="#F3"/>
+<choice dtmf="3" next="#menu1"/>
+</menu>
+
+<menu id="menu2" dtmf="true">
+<prompt><audio src="responder3-.wav"/></prompt>
+
+<prompt><audio src="responder4-.wav"/></prompt>
+<choice dtmf="1" next="#F2"/>
+<choice dtmf="2" next="#F3"/>
+<choice dtmf="3" next="#menu2"/>
+</menu>
+
+
+<form id="F2">
+<block>
+<prompt><audio src="responder5-.wav"/></prompt>
+ <prompt><audio src="beep1.wav"/></prompt>
+<prompt><audio src="responder6-.wav"/></prompt>
+</block>
+</form>
+
+<form id="F3">
+<block>
+<prompt><audio src="responder7-.wav"/></prompt>
+</block>
+</form>
+
+</vxml>
